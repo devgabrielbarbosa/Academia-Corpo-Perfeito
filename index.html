@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Corpo Perfeito | Bem-vindo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Academia Corpo Perfeito</h1>
+        <nav class="botao">
+            <a href="#index.html">Início</a>
+            <a href="./pagina-academia/plano.html">Conheça Nossos Planos</a>
+            <a href="./pagina-academia/matricula.html">Matrículas</a>
+        </nav>
+    </header>
+
+  
+        <main class="pontos-container">
+            <h2>🎯 Controle de Pontos e Recompensas</h2>
+            <p>Ganhe pontos ao completar desafios e troque por prêmios exclusivos!</p>
+        
+            <h3>💡 Como Ganhar Pontos?</h3>
+            <table border="1">
+                <tr>
+                    <th>Ação</th>
+                    <th>Pontos</th>
+                </tr>
+                <tr>
+                    <td>✅ Completar um treino do dia</td>
+                    <td>+10 pontos</td>
+                </tr>
+                <tr>
+                    <td>✅ Participar de uma aula especial</td>
+                    <td>+15 pontos</td>
+                </tr>
+                <tr>
+                    <td>✅ Indicar um amigo para se matricular</td>
+                    <td>+30 pontos</td>
+                </tr>
+                <tr>
+                    <td>✅ Fechar um plano trimestral ou anual</td>
+                    <td>+50 pontos</td>
+                </tr>
+                <tr>
+                    <td>✅ Participar de desafios da academia</td>
+                    <td>+20 pontos</td>
+                </tr>
+                <tr>
+                    <td>✅ Treinar 5 dias seguidos na semana</td>
+                    <td>+25 pontos</td>
+                </tr>
+                <tr>
+                    <td>✅ Postar uma foto na academia e marcar nosso Instagram</td>
+                    <td>+5 pontos</td>
+                </tr>
+            </table>
+
+        <div class="premiacao">
+            <div class="soma-pontos">
+                <h3>🎁 Troque seus pontos por prêmios!</h3>
+                <p>💪 Acumule pontos e troque por descontos na mensalidade, camisetas, suplementos, sessões de personal trainer e muito mais!</p>
+                
+                <button id="btn-pontos" onclick="adicionarPontos()">Adicionar Pontos</button>
+                <p id="pontos-texto">Você tem <span id="pontos">0</span> pontos.</p>
+            </div>
+            
+            <h2>Tabela de Recompensas de Prêmios - Metas da Academia</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meta Atingida</th>
+                        <th>Recompensa</th>
+                        <th>Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 Semana de Frequência</td>
+                        <td>Camiseta Personalizada</td>
+                        <td>Receba uma camiseta exclusiva da academia.</td>
+                    </tr>
+                    <tr>
+                        <td>1 Mês de Frequência</td>
+                        <td>Desconto em Plano</td>
+                        <td>Ganhe 10% de desconto no seu plano mensal.</td>
+                    </tr>
+                    <tr>
+                        <td>5 Kg Perdidos</td>
+                        <td>Voucher para Refeição Saudável</td>
+                        <td>Ganhe um voucher para um restaurante saudável parceiro.</td>
+                    </tr>
+                    <tr>
+                        <td>10 Kg Perdidos</td>
+                        <td>Equipamento de Treino</td>
+                        <td>Ganhe um equipamento básico de treino (halteres ou corda).</td>
+                    </tr>
+                    <tr>
+                        <td>Meta de Performance</td>
+                        <td>Consulta com Personal Trainer</td>
+                        <td>Ganhe uma consulta personalizada com nosso personal trainer.</td>
+                    </tr>
+                    <tr>
+                        <td>Treino de Força Completo</td>
+                        <td>Bolsa Esportiva</td>
+                        <td>Ganhe uma bolsa esportiva da academia.</td>
+                    </tr>
+                    <tr>
+                        <td>Metas de Consistência</td>
+                        <td>Assinatura de Revista Fitness</td>
+                        <td>Receba uma assinatura anual de uma revista fitness.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+            
+            
+            
+        </div>
+    
+        </main>
+        
+
+  <!-- Chatbot -->
+<div id="chat-container">
+    <div id="chat-header">Chat -Academia Corpo Perfeito</div>
+    <div id="chat-body" class="chat-body"></div>
+    <div id="chat-footer">
+        <input type="text" id="chat-input" placeholder="Digite sua pergunta...">
+        <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>🏋️ Academia Corpo Perfeito</h3>
+            <p>O seu melhor lugar para treinar e alcançar seus objetivos!</p>
+            <p>📍 Endereço: Av Conêgo João Lima N 15 Araguaína TO</p>
+            <p>📞 Telefone: (63) 98116-6505</p>
+            <p>📧 E-mail: Corpoperfeito@gmail.com</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="#">🏠 Início</a></li>
+                <li><a href="#">📋 Planos</a></li>
+                <li><a href="#">💪 Treinadores</a></li>
+                <li><a href="#">📞 Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Nos siga</h4>
+            <a href="#" target="_blank">📘 Facebook</a>
+            <a href="#" target="_blank">📸 Instagram</a>
+            <a href="#" target="_blank">🎥 YouTube</a>
+        </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 Academia FitLife - Todos os direitos reservados.</p>
+</footer>
+    <script src="./escrip.js"></script>
+</body>
+
+</html>
