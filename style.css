@@ -283,7 +283,9 @@ footer {
 
 /* Responsividade */
 @media (max-width: 600px) {
-
+    *{
+        font-size: 15pxs;
+    }
     .botao a{
         font-size: 15px;
         padding: 10px;
@@ -295,7 +297,7 @@ footer {
         max-width: 100%;  
         width: auto;       
         bottom: 0;        
-        right: 0;  
+        right: 300px;  
         margin: 10px;      
     }
     .premiacao {

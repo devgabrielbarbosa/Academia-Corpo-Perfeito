@@ -38,7 +38,6 @@ const respostas = {
     "valor": "O valor varia de acordo com o plano escolhido. Podemos te ajudar a escolher o melhor para você!",
     "horário": "Nosso horário de funcionamento é das 08h às 23h.",
     "spinning": "É uma aula de bike indoor cheia de energia!",
-    "mensalidade" : "O valor varia de acordo com o plano escolhido. Você pode nos chamar ou vir até a academia para conhecer todas as opções e escolher a que melhor se encaixa no seu bolso!",
     "ritbox": "É uma mistura de dança e exercícios funcionais no ritmo da música.",
     "abs": "É um treino focado no fortalecimento do abdômen.",
     "luta": "Temos aulas de luta! Pergunte sobre as modalidades disponíveis.",
@@ -48,7 +47,12 @@ const respostas = {
     "desconto": "Temos promoções para indicações! Entre em contato para mais detalhes.",
     "personal": "Temos professores para ajudar nos treinos e oferecemos serviço de personal trainer.",
     "fluxo": "Os horários de menor movimento são das 09h às 11h e das 16h às 19h.",
-    "criança": "Depende! Se ele for aluno e estiver na faixa etária permitida, sim!"
+    "criança": "Depende! Se ele for aluno e estiver na faixa etária permitida, sim!",
+    "kids" : "Se tivermos, você pode deixar seu pequeno se divertindo enquanto treina. Se não, podemos conversar sobre as opções disponíveis para pais que treinam aqui.",
+    "banho" : "Sim! Temos vestiários equipados para você tomar aquele banho depois do treino.",
+    "secador" : "Depende da unidade. Se precisar, pode perguntar na recepção!",
+    "lanchonete" : "Sim! Temos opções saudáveis para você repor as energias depois do treino.",
+    "suplementos" : "Sim, oferecemos uma seleção de suplementos para te ajudar a alcançar seus objetivos",
 };
 
 // Normaliza o texto removendo acentos e deixando em minúsculas
@@ -56,18 +60,57 @@ function normalizarTexto(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-// Função para encontrar a resposta mais próxima
+// Função para encontrar a resposta e tratar redirecionamentos
 function encontrarResposta(mensagem) {
     mensagem = normalizarTexto(mensagem);
-    
+
+    // Verifica se a pergunta é sobre planos
+    if (
+        mensagem.includes("plano") || 
+        mensagem.includes("planos") || 
+        mensagem.includes("quais sao os planos") || 
+        mensagem.includes("me fale sobre os planos")
+    ) {
+        setTimeout(() => {
+            window.location.href = "./pagina-academia/plano.html"; // Verifique se o arquivo está na mesma pasta
+        }, 1500);
+        return "Boot: Vou te redirecionar para a página de planos...";
+    }
+
+    // Verifica se a pergunta é sobre matrícula
+    if (
+        mensagem.includes("matricula") || 
+        mensagem.includes("fazer matricula") || 
+        mensagem.includes("como faco para me matricular") || 
+        mensagem.includes("onde faco a matricula")
+    ) {
+        setTimeout(() => {
+            window.location.href = "./pagina-academia/matricula.html"; // Verifique se o arquivo está na mesma pasta
+        }, 1500);
+        return "Boot: Vou te redirecionar para a página de matrícula...";
+    }
+    if(
+        mensagem.includes("mensalidade") ||
+        mensagem.includes("me fala sobre a mensalidade") ||
+        mensagem.includes("qual é a mensalidade")
+    ) {
+        setTimeout(() => {
+            window.location.href = "./pagina-academia/plano.html";
+        }, 1500);
+        return "Boot: Vou te redirecionar para a página de planos...";
+    }
+
+    // Se a pergunta não for sobre planos ou matrícula, responde normalmente
     for (const chave in respostas) {
         if (mensagem.includes(chave)) {
-            return respostas[chave]; // Retorna a resposta correspondente à palavra-chave encontrada
+            return respostas[chave];
         }
     }
-    return "Não entendi, pode repetir?"; // Se não encontrar nada, resposta padrão
+
+    return "Não entendi, pode repetir?";
 }
 
+// Função para processar a mensagem do usuário
 function enviarMensagem() {
     const input = document.getElementById('chat-input');
     const mensagemOriginal = input.value.trim();
@@ -75,21 +118,22 @@ function enviarMensagem() {
 
     adicionarMensagem("Você", mensagemOriginal);
 
-    // Simulando tempo de resposta (2 segundos)
+    // Simulando tempo de resposta (1,8 segundos)
     setTimeout(() => {
         const resposta = encontrarResposta(mensagemOriginal);
-        adicionarMensagem("Bot", resposta);
+        adicionarMensagem("Boot", resposta);
     }, 1800);
 
     input.value = "";
 }
 
+// Função para adicionar mensagens no chat
 function adicionarMensagem(remetente, texto) {
     const chatBody = document.getElementById('chat-body');
     if (!chatBody) return; // Evita erros se o chat não estiver na página
 
     const msgDiv = document.createElement('div');
-    msgDiv.classList.add(remetente === "Você" ? "usuario" : "bot");
+    msgDiv.classList.add(remetente === "Você" ? "usuario" : "boot");
     msgDiv.textContent = `${remetente}: ${texto}`;
     chatBody.appendChild(msgDiv);
     chatBody.scrollTop = chatBody.scrollHeight; // Rolagem automática para a última mensagem
