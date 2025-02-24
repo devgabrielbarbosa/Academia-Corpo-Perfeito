@@ -10,15 +10,16 @@
 body {
     background-color: #f4f4f4;
     text-align: center;
-    padding: 20px;
+    margin: 0;
 }
 
 /* Cabeçalho */
 header {
     background-color: #2c3e50;
     color: white;
-    padding: 15px;
     font-size: 20px;
+    padding: 15px 0;
+    text-align: center;
 }
 
 /* Formulário */
@@ -42,12 +43,21 @@ header {
 .matricula-form select,
 .matricula-form textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    transition: border 0.3s;
 }
 
+.matricula-form input:focus,
+.matricula-form select:focus,
+.matricula-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Botão */
 button {
     background-color: #3498db;
     color: white;
@@ -58,10 +68,12 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #2980b9;
+    transform: scale(1.05);
 }
 
 /* Rodapé */
@@ -72,7 +84,25 @@ footer {
     margin-top: 30px;
 }
 
-.termos{
-    color: black;
+/* Melhorando a classe .termos */
+.termos {
+    color: white;
     background: #2980b9;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Tornando o layout responsivo */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
