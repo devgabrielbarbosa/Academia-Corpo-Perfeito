@@ -138,3 +138,35 @@ function adicionarMensagem(remetente, texto) {
     chatBody.appendChild(msgDiv);
     chatBody.scrollTop = chatBody.scrollHeight; // Rolagem automática para a última mensagem
 }
+
+function contratarPlano(plano) {
+    // Exibir o modal
+    document.getElementById('modal').style.display = "block";
+
+    // Atualizar o título do modal com o nome do plano
+    const modalTitle = document.getElementById('modalTitle');
+    const planoSelecionado = document.getElementById('planoSelecionado');
+    
+    if (plano === 'mensal') {
+        modalTitle.innerHTML = "📋 Preencha seus dados para o Plano Mensal";
+        planoSelecionado.value = 'mensal';
+    } else if (plano === 'trimestral') {
+        modalTitle.innerHTML = "📋 Preencha seus dados para o Plano Trimestral";
+        planoSelecionado.value = 'trimestral';
+    } else if (plano === 'anual') {
+        modalTitle.innerHTML = "📋 Preencha seus dados para o Plano Anual";
+        planoSelecionado.value = 'anual';
+    }
+}
+
+// Fechar Modal
+document.getElementById('closeModalBtn').onclick = function() {
+    document.getElementById('modal').style.display = "none";
+}
+
+// Fechar Modal se o usuário clicar fora dele
+window.onclick = function(event) {
+    if (event.target == document.getElementById('modal')) {
+        document.getElementById('modal').style.display = "none";
+    }
+}

@@ -1,124 +1,276 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Corpo Perfeito | Bem-vindo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"  href="./imagens/corpo-perfeito.jpg.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./imagens/corpo-perfeito.jpg.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="cabecalho">
-            <img src="./imagens/corpo-perfeito.jpg" alt="">
-            <p>O seu melhor lugar para treinar e alcançar seus objetivos!</p>
-        </div>
-        <nav class="botao">
-            <a href="#index.html">Início</a>
-            <a href="./pagina-academia/plano.html">Conheça Nossos Planos</a>
-            <a href="./pagina-academia/matricula.html">Matrículas</a>
-        </nav>
+      <div class="cabecalho">
+        <img src="./imagens/corpo-perfeito.jpg" alt="" />
+        <p>O seu melhor lugar para treinar e alcançar seus objetivos!</p>
+      </div>
+      <nav class="botao">
+        <a href="#index.html">Início</a>
+        <a href="#plano">Conheça Nossos Planos</a>
+      </nav>
     </header>
 
-  
-        <main class="pontos-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Meta Atingida</th>
-                        <th>Recompensa</th>
-                        <th>Detalhes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1 Semana de Frequência</td>
-                        <td>Camiseta Personalizada</td>
-                        <td>Receba uma camiseta exclusiva da academia.</td>
-                    </tr>
-                    <tr>
-                        <td>1 Mês de Frequência</td>
-                        <td>Desconto em Plano</td>
-                        <td>Ganhe 10% de desconto no seu plano mensal.</td>
-                    </tr>
-                    <tr>
-                        <td>5 Kg Perdidos</td>
-                        <td>Voucher para Refeição Saudável</td>
-                        <td>Ganhe um voucher para um restaurante saudável parceiro.</td>
-                    </tr>
-                    <tr>
-                        <td>10 Kg Perdidos</td>
-                        <td>Equipamento de Treino</td>
-                        <td>Ganhe um equipamento básico de treino (halteres ou corda).</td>
-                    </tr>
-                    <tr>
-                        <td>Meta de Performance</td>
-                        <td>Consulta com Personal Trainer</td>
-                        <td>Ganhe uma consulta personalizada com nosso personal trainer.</td>
-                    </tr>
-                    <tr>
-                        <td>Treino de Força Completo</td>
-                        <td>Bolsa Esportiva</td>
-                        <td>Ganhe uma bolsa esportiva da academia.</td>
-                    </tr>
-                    <tr>
-                        <td>Metas de Consistência</td>
-                        <td>Assinatura de Revista Fitness</td>
-                        <td>Receba uma assinatura anual de uma revista fitness.</td>
-                    </tr>
-                </tbody>
-            </table>
-            
+    <main class="pontos-container">
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Meta Atingida</th>
+              <th>Recompensa</th>
+              <th>Detalhes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 Semana de Frequência</td>
+              <td>Camiseta Personalizada</td>
+              <td>Receba uma camiseta exclusiva da academia.</td>
+            </tr>
+            <tr>
+              <td>1 Mês de Frequência</td>
+              <td>Desconto em Plano</td>
+              <td>Ganhe 10% de desconto no seu plano mensal.</td>
+            </tr>
+            <tr>
+              <td>5 Kg Perdidos</td>
+              <td>Voucher para Refeição Saudável</td>
+              <td>Ganhe um voucher para um restaurante saudável parceiro.</td>
+            </tr>
+            <tr>
+              <td>10 Kg Perdidos</td>
+              <td>Equipamento de Treino</td>
+              <td>
+                Ganhe um equipamento básico de treino (halteres ou corda).
+              </td>
+            </tr>
+            <tr>
+              <td>Meta de Performance</td>
+              <td>Consulta com Personal Trainer</td>
+              <td>
+                Ganhe uma consulta personalizada com nosso personal trainer.
+              </td>
+            </tr>
+            <tr>
+              <td>Treino de Força Completo</td>
+              <td>Bolsa Esportiva</td>
+              <td>Ganhe uma bolsa esportiva da academia.</td>
+            </tr>
+            <tr>
+              <td>Metas de Consistência</td>
+              <td>Assinatura de Revista Fitness</td>
+              <td>Receba uma assinatura anual de uma revista fitness.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <div>
+        <h2>Conheça nosso Planos</h2>
+        <section class="plano" id="plano">
+          <h2>Plano Mensal</h2>
+          <p>R$ 99,90/mês</p>
+          <button onclick="contratarPlano('mensal')">Contratar</button>
+        </section>
 
-            
-            
-            
+        <section class="plano">
+          <h2>Plano Trimestral</h2>
+          <p>R$ 269,90 a cada 3 meses</p>
+          <p>Dividimos em até 3x nos cartões</p>
+          <button onclick="contratarPlano('trimestral')">Contratar</button>
+        </section>
+
+        <section class="plano">
+          <h2>Plano Anual</h2>
+          <p>R$ 999,90/ano</p>
+          <p>Dividimos em até 6x nos cartões</p>
+          <button onclick="contratarPlano('anual')">Contratar</button>
+        </section>
+
+        <div id="pagamento">
+          <h3>Formas de Pagamento:</h3>
+          <p>✅ Cartão de Crédito | ✅ PIX | ✅ Boleto</p>
         </div>
-    
-        </main>
-        
 
-  <!-- Chatbot -->
-<div id="chat-container">
-    <div id="chat-header">Chat -Academia Corpo Perfeito</div>
-    <div id="chat-body" class="chat-body"></div>
-    <div id="chat-footer">
-        <input type="text" id="chat-input" placeholder="Digite sua pergunta...">
+        <!-- O Modal -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <!-- Botão de Fechar dentro do Modal -->
+            <span id="closeModalBtn" class="close">&times;</span>
+
+            <section class="form-container">
+              <h2 id="modalTitle">📋 Preencha seus dados para matrícula</h2>
+              <form action="#" method="POST" class="matricula-form">
+                <input
+                  type="hidden"
+                  id="planoSelecionado"
+                  name="plano"
+                  required
+                />
+
+                <label for="nome">Nome Completo:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  placeholder="Ex: João Silva"
+                />
+
+                <label for="email">E-mail:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Ex: joao@email.com"
+                />
+
+                <label for="telefone">Telefone:</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  required
+                  placeholder="Ex: (11) 98765-4321"
+                />
+
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input
+                  type="date"
+                  id="data_nascimento"
+                  name="data_nascimento"
+                  required
+                />
+
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                  <option value="">Selecione</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="outro">Outro</option>
+                </select>
+
+                <label for="objetivo">Objetivo:</label>
+                <select id="objetivo" name="objetivo" required>
+                  <option value="">Selecione</option>
+                  <option value="emagrecimento">Emagrecimento</option>
+                  <option value="hipertrofia">Ganho de Massa</option>
+                  <option value="condicionamento">
+                    Condicionamento Físico
+                  </option>
+                  <option value="reabilitacao">Reabilitação</option>
+                  <option value="outro">Outro</option>
+                </select>
+
+                <label for="horario">Horário Preferido:</label>
+                <select id="horario" name="horario" required>
+                  <option value="">Selecione</option>
+                  <option value="manha">Manhã</option>
+                  <option value="tarde">Tarde</option>
+                  <option value="noite">Noite</option>
+                </select>
+
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento" name="pagamento" required>
+                  <option value="">Selecione</option>
+                  <option value="cartao">Cartão de Crédito/Débito</option>
+                  <option value="pix">PIX</option>
+                  <option value="boleto">Boleto</option>
+                </select>
+
+                <label for="observacoes">Observações:</label>
+                <textarea
+                  id="observacoes"
+                  name="observacoes"
+                  rows="3"
+                  placeholder="Digite aqui alguma observação..."
+                ></textarea>
+                <div>
+                  <label for="termos">
+                    <div  class="form-footer">
+                      Aceito os <a href="#">termos e condições</a>
+                      <div>
+                       <input type="checkbox" id="termos" name="termos" required />
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <button type="submit">✅ Finalizar Matrícula</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Chatbot -->
+    <div id="chat-container">
+      <div id="chat-header">Chat -Academia Corpo Perfeito</div>
+      <div id="chat-body" class="chat-body"></div>
+      <div id="chat-footer">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Digite sua pergunta..."
+        />
         <button onclick="enviarMensagem()">Enviar</button>
+      </div>
     </div>
-</div>
-<footer>
-    <div class="footer-container">
+    <footer>
+      <div class="footer-container">
         <div class="footer-info">
-            <h3>🏋️ Academia Corpo Perfeito</h3>
-            <p>O seu melhor lugar para treinar e alcançar seus objetivos!</p>
-            <p>📍 Endereço: Av Conêgo João Lima N 15 Araguaína TO</p>
-            <p>📞 Telefone: (63) 98116-6505</p>
-            <p>📧 E-mail: Corpoperfeito@gmail.com</p>
+          <h3>🏋️ Academia Corpo Perfeito</h3>
+          <p>O seu melhor lugar para treinar e alcançar seus objetivos!</p>
+          <p>📍 Endereço: Av Conêgo João Lima N 15 Araguaína TO</p>
+          <p>📞 Telefone: (63) 98116-6505</p>
+          <p>📧 E-mail: Corpoperfeito@gmail.com</p>
         </div>
 
         <div class="footer-links">
-            <h4>Links Rápidos</h4>
-            <ul>
-                <li><a href="#">🏠 Início</a></li>
-                <li><a href="#">📋 Planos</a></li>
-                <li><a href="#">💪 Treinadores</a></li>
-                <li><a href="#">📞 Contato</a></li>
-            </ul>
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#">🏠 Início</a></li>
+            <li><a href="#">📋 Planos</a></li>
+            <li><a href="#">💪 Treinadores</a></li>
+            <li><a href="#">📞 Contato</a></li>
+          </ul>
         </div>
 
         <div class="footer-social">
-            <h4>Nos siga</h4>
-            <a href="#" target="_blank"><img src="./imagens/facbook.png" alt="logotipo do Facebook"> Facebook</a>
-            <a href="#" target="_blank"><img src="./imagens/instagran.png" alt="logotipo do instagran">Instagram</a>
-            <a href="#" target="_blank"><img src="./imagens/YouTube.png" alt="logotipo do YouTube"> YouTube</a>
+          <h4>Nos siga</h4>
+          <a href="#" target="_blank"
+            ><img src="./imagens/facbook.png" alt="logotipo do Facebook" />
+            Facebook</a
+          >
+          <a href="#" target="_blank"
+            ><img
+              src="./imagens/instagran.png"
+              alt="logotipo do instagran"
+            />Instagram</a
+          >
+          <a href="#" target="_blank"
+            ><img src="./imagens/YouTube.png" alt="logotipo do YouTube" />
+            YouTube</a
+          >
         </div>
-    </div>
-    <p class="footer-copy">&copy; 2025 Academia Corpo Perfeito - Todos os direitos reservados.</p>
-</footer>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 Academia Corpo Perfeito - Todos os direitos reservados.
+      </p>
+    </footer>
     <script src="./escript.js"></script>
-</body>
-
+  </body>
 </html>

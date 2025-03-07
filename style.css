@@ -29,7 +29,7 @@ header h1 {
 }
 
 img{
-    width: 300px;
+    max-width: 300px;
 }
 .cabecalho {
     padding: 30px;
@@ -44,13 +44,14 @@ a{
     gap: 10px;
 }
 .botao a {
-    border: 1px solid #000000;
+    border: 0.1px solid #494949;
     padding: 10px;
     border-radius: 3px;
     background-color: #ffffff;
+    box-shadow: rgb(0, 0, 0.6);
 }
 .botao a:hover{
-    padding: 11px;
+    box-shadow: 0 0 7px rgb(0, 0, 0.1);
 }
 .pontos-container {
     max-width: 600px;
@@ -97,7 +98,7 @@ a{
 
 /* Estilo da Tabela */
 table {
-    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     padding: 15px;
     margin-bottom: 20px;
@@ -223,6 +224,166 @@ ul{
     border-radius: 12px;
     max-width: 70%;
 }
+/* Estilo do Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+    padding-top: 100px;
+    overflow-y: scroll;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necessário para posicionar o botão de fechar dentro do modal */
+}
+
+/* Botão de Fechar dentro do Modal */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilo dos Planos */
+.plano {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.plano h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.plano p {
+    font-size: 18px;
+    color: #666;
+}
+
+.plano button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plano button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do Formulário */
+.form-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.matricula-form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.matricula-form input,
+.matricula-form select,
+.matricula-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.matricula-form textarea {
+    resize: vertical;
+}
+
+.matricula-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.matricula-form button:hover {
+    background-color: #45a049;
+}
+
+.matricula-form a {
+    color: #4CAF50;
+}
+
+.matricula-form a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para Formas de Pagamento */
+#pagamento {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#pagamento p {
+    color: #333;
+}
+
+#pagamento h3 {
+    color: #4CAF50;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-footer{ 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
 
 /* Estilo do Rodapé */
 footer {
@@ -293,9 +454,14 @@ footer {
 @media (max-width: 600px) {
     *{
         font-size: 15pxs;
+        margin: 0;
     }
     img{
         width: 200px;
+    }
+    table{
+        width: 300px;
+        font-size: 12px;
     }
     .botao a{
         font-size: 15px;
@@ -305,7 +471,7 @@ footer {
  
     #chat-container {
         position: static;  
-        max-width: 100%;  
+        max-width: 300px;  
         width: auto;       
         bottom: 0;        
         right: 300px;  
@@ -318,4 +484,21 @@ footer {
         display: flex;
         flex-direction: column;
      }
+     .plano {
+        margin: 20px 0;
+        max-width: 300px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .matricula-form button {
+        padding: 14px 18px;
+        font-size: 18px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
 }
