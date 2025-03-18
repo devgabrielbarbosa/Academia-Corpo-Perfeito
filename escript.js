@@ -1,31 +1,3 @@
-// Controle de Pontos
-let pontos = 0;
-
-// Função para adicionar pontos
-function adicionarPontos(quantidade = 10) {
-    pontos += quantidade;
-    document.getElementById('pontos').textContent = pontos;
-    alert(`Você ganhou ${quantidade} pontos! Total: ${pontos} pontos.`);
-}
-
-// Adicionando botões para ganhar pontos dinamicamente
-document.addEventListener("DOMContentLoaded", function () {
-    const botoes = [
-        { texto: "🏋️ Completar Treino do Dia (+10 pts)", pontos: 10 },
-        { texto: "🧘 Aula Especial (+15 pts)", pontos: 15 },
-        { texto: "📢 Indicar um Amigo (+30 pts)", pontos: 30 },
-        { texto: "💳 Assinar Plano Trimestral/Anual (+50 pts)", pontos: 50 }
-    ];
-
-    const container = document.getElementById("pontos-container");
-
-    botoes.forEach(botaoInfo => {
-        const botao = document.createElement("button");
-        botao.textContent = botaoInfo.texto;
-        botao.onclick = () => adicionarPontos(botaoInfo.pontos);
-        container.appendChild(botao);
-    });
-});
 
 // Chatbot
 const respostas = {
@@ -48,11 +20,15 @@ const respostas = {
     "personal": "Temos professores para ajudar nos treinos e oferecemos serviço de personal trainer.",
     "fluxo": "Os horários de menor movimento são das 09h às 11h e das 16h às 19h.",
     "criança": "Depende! Se ele for aluno e estiver na faixa etária permitida, sim!",
-    "kids" : "Se tivermos, você pode deixar seu pequeno se divertindo enquanto treina. Se não, podemos conversar sobre as opções disponíveis para pais que treinam aqui.",
+    "kids" : "Se tivermos, você pode deixar seu pequeno se divertindo enquanto treina.",
     "banho" : "Sim! Temos vestiários equipados para você tomar aquele banho depois do treino.",
     "secador" : "Depende da unidade. Se precisar, pode perguntar na recepção!",
     "lanchonete" : "Sim! Temos opções saudáveis para você repor as energias depois do treino.",
     "suplementos" : "Sim, oferecemos uma seleção de suplementos para te ajudar a alcançar seus objetivos",
+    "equipamentos" : "no momento temos esteiras, bicicletas, elípticos, halteres, barras e máquinas de musculação.",
+    "aulas" : "Temos aulas de dança, luta, spinning, abs, ritbox e muito mais!",
+    "funcionamento" : "Estamos abertos das 08h às 23h.",
+    "localizacao" : "Estamos localizados na Av Conêgo João Lima N 15.",
 };
 
 // Normaliza o texto removendo acentos e deixando em minúsculas
@@ -72,7 +48,7 @@ function encontrarResposta(mensagem) {
         mensagem.includes("me fale sobre os planos")
     ) {
         setTimeout(() => {
-            window.location.href = "./pagina-academia/plano.html"; // Verifique se o arquivo está na mesma pasta
+            window.location.href = "plano"; // Verifique se o arquivo está na mesma pasta
         }, 1500);
         return "Boot: Vou te redirecionar para a página de planos...";
     }
@@ -95,7 +71,7 @@ function encontrarResposta(mensagem) {
         mensagem.includes("qual é a mensalidade")
     ) {
         setTimeout(() => {
-            window.location.href = "./pagina-academia/plano.html";
+            window.location.href = "plano";
         }, 1500);
         return "Boot: Vou te redirecionar para a página de planos...";
     }
@@ -153,6 +129,9 @@ function contratarPlano(plano) {
     } else if (plano === 'trimestral') {
         modalTitle.innerHTML = "📋 Preencha seus dados para o Plano Trimestral";
         planoSelecionado.value = 'trimestral';
+    }else if (plano === 'simestral') {
+        modalTitle.innerHTML = "📋 Preencha seus dados para o Plano Simestral";
+        planoSelecionado.value = 'simestral';
     } else if (plano === 'anual') {
         modalTitle.innerHTML = "📋 Preencha seus dados para o Plano Anual";
         planoSelecionado.value = 'anual';

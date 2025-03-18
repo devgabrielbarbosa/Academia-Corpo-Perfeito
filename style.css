@@ -20,9 +20,11 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    background: #28c7f8;
+    background: #1e90ff;
+    background-image: url(./imagens/capa-academia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta a imagem para cobrir todo o cabeçalho */
 }
-
 header h1 {
     padding: 20px;
     font-size: 2.9rem;
@@ -31,8 +33,71 @@ header h1 {
 img{
     max-width: 300px;
 }
+
+.container h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 4rem;
+}
+.instagramavel {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .eventos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .instagramavel-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+  }
+  
+  .instagramavel-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .instagramavel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    padding: 15px;
+  }
+  
+  .btn-inscricao {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  
+  .btn-inscricao:hover {
+    background: #1e90ff;
+  }
+  
 .cabecalho {
-    padding: 30px;
+    height: 600px;
 }
 a{
     text-decoration: none;
@@ -54,7 +119,8 @@ a{
     box-shadow: 0 0 7px rgb(0, 0, 0.1);
 }
 .pontos-container {
-    max-width: 600px;
+    margin: 10px;
+    max-width: 800px;
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -63,99 +129,12 @@ a{
     text-align: center;
 }
 
-#pontos-container h2 {
-    color: #1e90ff;
-}
-
-#pontos-texto {
-    font-size: 1.2em;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-#btn-pontos {
-    padding: 10px 20px;
-    background: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s ease;
-}
-
-.premiacao h3{
-    font-size: 3em;
-}
-
-.soma-pontos{
-    padding: 20px;
-}
-
-#btn-pontos:hover {
-    background: #005ecb;
-}
-
-/* Estilo da Tabela */
-table {
-    max-width: 100%;
-    border-collapse: collapse;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-table, th, td {
-    border: 1px solid #efeded;
-}
-
-th, td {
-    padding: 10px;
-}
-
-th {
-    background: #1e90ff;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background: #f2f2f2;
-}
-
-/* Botões para ganhar pontos */
-button {
-    display: block;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-button:nth-child(1) { background: #ff5733; color: white; } /* Completar treino */
-button:nth-child(2) { background: #33cc33; color: white; } /* Aula especial */
-button:nth-child(3) { background: #ffcc00; color: black; } /* Indicar amigo */
-button:nth-child(4) { background: #8a2be2; color: white; } /* Assinar plano */
-
-.premiacao{
-    background: #f4f4f4;
-    list-style-type: none;
-}
-
-ul{
-    list-style: none;
-}
 /* Chatbot */
 #chat-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 320px;
+    width: 370px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: white;
@@ -275,21 +254,31 @@ ul{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 300px;
+    max-width: 400px;
     margin: 20px;
 }
-
-.plano h2 {
-    font-size: 24px;
-    color: #333;
+#plano{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#plano h2 {
+    font-size: 2.5rem;
+    color: #000000;
+}
+#plano h3 {
+    font-size: 2.3rem;
+    color: #000000;
 }
 
-.plano p {
+#plano p {
     font-size: 18px;
     color: #666;
 }
 
-.plano button {
+#plano button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -300,7 +289,7 @@ ul{
     transition: background-color 0.3s ease;
 }
 
-.plano button:hover {
+#plano button:hover {
     background-color: #45a049;
 }
 
@@ -451,31 +440,41 @@ footer {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     *{
         font-size: 15pxs;
         margin: 0;
     }
     img{
-        width: 200px;
+        max-width: 250px;
     }
-    table{
-        width: 300px;
-        font-size: 12px;
+    header{
+        background-image: none;
+        height: auto;
+    }
+    .container h1{
+        font-size: 2rem;
     }
     .botao a{
         font-size: 15px;
         padding: 10px;
         margin:5px;
     }
- 
+
     #chat-container {
         position: static;  
-        max-width: 300px;  
+        width: 320px;  
         width: auto;       
         bottom: 0;        
         right: 300px;  
         margin: 10px;      
+    }
+    .instagramavel{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .instagramavel img{
+        width: 400px;
     }
     .premiacao {
         font-size: 16px;   
