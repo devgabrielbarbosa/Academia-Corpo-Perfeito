@@ -1,8 +1,6 @@
 @import "./css/planos.css";
 @import "./css/matricula.css";
 
-/* Resetando estilos padrão */
-
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +19,7 @@ header {
     padding: 20px;
     text-align: center;
     background: #1e90ff;
-    background-image: url(./imagens/capa-academia.jpg);
+    background-image: url(./imagens/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover; /* Ajusta a imagem para cobrir todo o cabeçalho */
 }
