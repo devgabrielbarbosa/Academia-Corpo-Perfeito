@@ -48,9 +48,9 @@ function encontrarResposta(mensagem) {
         mensagem.includes("me fale sobre os planos")
     ) {
         setTimeout(() => {
-            window.location.href = "plano"; // Verifique se o arquivo está na mesma pasta
+            window.location.href = "#plano"; // Redireciona para a seção de planos na mesma página
         }, 1500);
-        return "Boot: Vou te redirecionar para a página de planos...";
+        return "Boot: Vou te redirecionar para a seção de planos...";
     }
 
     // Verifica se a pergunta é sobre matrícula
@@ -61,19 +61,20 @@ function encontrarResposta(mensagem) {
         mensagem.includes("onde faco a matricula")
     ) {
         setTimeout(() => {
-            window.location.href = "./pagina-academia/matricula.html"; // Verifique se o arquivo está na mesma pasta
+            window.location.href = "#matricula"; // Certifique-se de que a seção de matrícula tenha o id "matricula"
         }, 1500);
-        return "Boot: Vou te redirecionar para a página de matrícula...";
+        return "Boot: Vou te redirecionar para a seção de matrícula...";
     }
+
     if(
         mensagem.includes("mensalidade") ||
         mensagem.includes("me fala sobre a mensalidade") ||
         mensagem.includes("qual é a mensalidade")
     ) {
         setTimeout(() => {
-            window.location.href = "plano";
+            window.location.href = "#plano"; // Redireciona para a seção de planos na mesma página
         }, 1500);
-        return "Boot: Vou te redirecionar para a página de planos...";
+        return "Boot: Vou te redirecionar para a seção de planos...";
     }
 
     // Se a pergunta não for sobre planos ou matrícula, responde normalmente
@@ -84,7 +85,7 @@ function encontrarResposta(mensagem) {
     }
 
     return "Não entendi, pode repetir?";
-}
+}1
 
 // Função para processar a mensagem do usuário
 function enviarMensagem() {

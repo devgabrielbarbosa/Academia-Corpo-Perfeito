@@ -141,32 +141,33 @@
         </div>
     </section>
     
-      
-      
+    <section>
       <div id="plano">
-        <h2>Conheça nosso Planos</h2>
-        <section class="plano" >
+        <h2 class="sub-titulo">Conheça nosso Planos</h2>
+        <section class="plano">
           <h2>Plano Mensal</h2>
           <p>R$ 99,90/mês</p>
-          <p>+ aulas coletivas</p>
+          <p>Possibilidade de renovação</p>
+          <p>+ aulas coletivas</p><br>
           <button onclick="contratarPlano('mensal')">Contratar</button>
         </section>
-
+           
         <section class="plano">
           <h3>Plano Trimestral</h3>
           <p>R$ 269,90 a cada 3 meses</p>
           <p>Dividimos em até 3x nos cartões</p>
           <p>+ aulas coletivas + ultima mensalidade 15% de desconto.</p>
           <button onclick="contratarPlano('trimestral')">Contratar</button>
-        </section><section class="plano">
+        </section>
 
+        <section class="plano">
           <h3>Plano Simestral</h3>
           <p>R$ 699,90/ano</p>
           <p>Dividimos em até 4x nos cartões</p>
           <p>+ aulas coletivas + ultima mensalidade 20% de descontos.</p>
           <button onclick="contratarPlano('simestral')">Contratar</button>
         </section>
-
+  
         <section class="plano">
           <h3>Plano Anual</h3>
           <p>R$ 999,90/ano</p>
@@ -174,18 +175,18 @@
           <p>+ aulas coletivas + ultima mensalidade 20% de descontos.</p>
           <button onclick="contratarPlano('anual')">Contratar</button>
         </section>
-
+  
         <div id="pagamento">
           <h3>Formas de Pagamento:</h3>
           <p>✅ Cartão de Crédito | ✅ PIX | ✅ Boleto  | ✅ Dinheiro</p>
         </div>
-
+  
         <!-- O Modal -->
         <div id="modal" class="modal">
           <div class="modal-content">
             <!-- Botão de Fechar dentro do Modal -->
             <span id="closeModalBtn" class="close">&times;</span>
-
+  
             <section class="form-container">
               <h2 id="modalTitle">📋 Preencha seus dados para matrícula</h2>
               <form action="#" method="POST" class="matricula-form">
@@ -195,7 +196,7 @@
                   name="plano"
                   required
                 />
-
+  
                 <label for="nome">Nome Completo:</label>
                 <input
                   type="text"
@@ -204,7 +205,7 @@
                   required
                   placeholder="Ex: João Silva"
                 />
-
+  
                 <label for="email">E-mail:</label>
                 <input
                   type="email"
@@ -213,7 +214,7 @@
                   required
                   placeholder="Ex: joao@email.com"
                 />
-
+  
                 <label for="telefone">Telefone:</label>
                 <input
                   type="tel"
@@ -222,7 +223,7 @@
                   required
                   placeholder="Ex: (11) 98765-4321"
                 />
-
+  
                 <label for="data_nascimento">Data de Nascimento:</label>
                 <input
                   type="date"
@@ -230,7 +231,7 @@
                   name="data_nascimento"
                   required
                 />
-
+  
                 <label for="genero">Gênero:</label>
                 <select id="genero" name="genero" required>
                   <option value="">Selecione</option>
@@ -238,7 +239,7 @@
                   <option value="feminino">Feminino</option>
                   <option value="outro">Outro</option>
                 </select>
-
+  
                 <label for="objetivo">Objetivo:</label>
                 <select id="objetivo" name="objetivo" required>
                   <option value="">Selecione</option>
@@ -250,7 +251,7 @@
                   <option value="reabilitacao">Reabilitação</option>
                   <option value="outro">Outro</option>
                 </select>
-
+  
                 <label for="horario">Horário Preferido:</label>
                 <select id="horario" name="horario" required>
                   <option value="">Selecione</option>
@@ -258,15 +259,16 @@
                   <option value="tarde">Tarde</option>
                   <option value="noite">Noite</option>
                 </select>
-
+  
                 <label for="pagamento">Forma de Pagamento:</label>
                 <select id="pagamento" name="pagamento" required>
                   <option value="">Selecione</option>
                   <option value="cartao">Cartão de Crédito/Débito</option>
                   <option value="pix">PIX</option>
                   <option value="boleto">Boleto</option>
+                  <option value="dinheiro">Dinheiro</option>
                 </select>
-
+  
                 <label for="observacoes">Observações:</label>
                 <textarea
                   id="observacoes"
@@ -290,6 +292,8 @@
           </div>
         </div>
       </div>
+    </section>
+      
     </main>
 
     <!-- Chatbot -->

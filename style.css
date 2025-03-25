@@ -244,51 +244,68 @@ a{
     text-decoration: none;
 }
 
-/* Estilo dos Planos */
-.plano {
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    margin: 20px;
-}
-#plano{
+#plano {
     display: flex;
-    flex-direction:column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    color: white;
-}
-#plano h2 {
-    font-size: 2.5rem;
-    color: #000000;
-}
-#plano h3 {
-    font-size: 2.3rem;
-    color: #000000;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
-#plano p {
-    font-size: 18px;
+.plano {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 300px; /* Permite que os itens se ajustem ao tamanho da tela */
+}
+
+
+.sub-titulo {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.plano p {
+    font-size: 1rem;
     color: #666;
+    margin-bottom: 10px;
 }
 
-#plano button {
+.plano button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-#plano button:hover {
-    background-color: #45a049;
+.plano button:hover {
+    background-color: #49b84d;
+}
+
+#pagamento {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagamento h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#pagamento p {
+    font-size: 1rem;
+    color: #666;
 }
 
 /* Estilo do Formulário */
@@ -374,8 +391,8 @@ a{
 
 /* Estilo do Rodapé */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #1e90ff;
+    color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
 }
@@ -393,12 +410,13 @@ footer {
     flex: 1;
     margin: 10px;
     min-width: 20px;
+    color: #ffffff;
 }
 
 .footer-info h3, .footer-links h4, .footer-social h4 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #f1c40f;
+    color: #ffffff;
 }
 
 .footer-info p {
@@ -415,7 +433,7 @@ footer {
 }
 
 .footer-links a, .footer-social a {
-    color: #f1c40f;
+    color: #ffffff;
     text-decoration: none;
     display: block;
     font-size: 1rem;
@@ -428,7 +446,7 @@ footer {
 .footer-copy {
     margin-top: 20px;
     font-size: 0.9rem;
-    border-top: 1px solid #f1c40f;
+    border-top: 1px solid #ffffff;
     padding-top: 10px;
 }
 
@@ -497,5 +515,8 @@ footer {
 
     .form-container h2 {
         font-size: 20px;
+    }
+    .sub-titulo {
+        font-size: 1.7rem;
     }
 }
